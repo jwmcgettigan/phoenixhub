@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'phoenixHub',
-	'brand': 'phoenixHub',
+	'name': 'PhoenixHub',
+	'brand': 'PhoenixHub',
 
 	'stylus': 'public',
 	'static': 'public',
@@ -57,6 +57,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
 	galleries: 'galleries',
+	clubs: 'clubs',
 	enquiries: 'enquiries',
 	users: 'users',
 });

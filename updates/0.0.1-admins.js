@@ -7,11 +7,12 @@
  * module.exports = function(done) { ... }
  */
 
+/*
 exports.create = {
 	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'jwmcgettigan@gmail.com', 'password': 's\'nitsuJ', 'isAdmin': true },
+		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'user@keystonejs.com', 'password': 'admin', 'isAdmin': true },
 	],
-};
+};*/
 
 /*
 

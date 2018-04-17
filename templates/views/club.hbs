@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <article>
+        <p><a href="/clubs">&larr; Back to clubs</a></p>
+      </article>
+      <hr>
+      <header>
+        <h1>{{data.club.title}}</h1>
+      </header>
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          {{# if data.club.image}}
+            <img src="{{cloudinaryUrl data.club.image crop='fit'}}" class="img-responsive">
+          {{/if}}
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Date Founded: </strong>{{data.club.dateFounded}}</li>
+          </ul>
+          <div class="well">
+            {{{data.club.description}}}
+          </div>
+          <a class="btn btn-success btn-block" href="/contact">Ask About This Club</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
