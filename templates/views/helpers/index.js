@@ -196,6 +196,16 @@ module.exports = function () {
 		return ('/blog/post/' + postSlug);
 	};
 
+	// Direct url link to a specific article
+	_helpers.articleUrl = function (articleSlug, options) {
+		return ('/news/' + articleSlug);
+	};
+
+	// Direct url link to a specific event
+	_helpers.eventUrl = function (eventSlug, options) {
+		return ('/events/' + eventSlug);
+	};
+
 	// Direct url link to a specific club
 	_helpers.clubUrl = function (clubSlug, options) {
 		return ('/clubs/' + clubSlug);

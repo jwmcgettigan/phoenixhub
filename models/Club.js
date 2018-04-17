@@ -1,6 +1,11 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
+/**
+ * Club Model
+ * ==========
+ */
+
 var Club = new keystone.List('Club', {
   map: {name: 'title'},
   singular:'Club',
@@ -11,9 +16,12 @@ var Club = new keystone.List('Club', {
 Club.add({
   title: {type: String, required: true},
   state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
-  description: { type: Types.Html, wysiwyg: true, height: 200 },
+  description: {
+		brief: { type: Types.Html, wysiwyg: true, height: 150 },
+		extended: { type: Types.Html, wysiwyg: true, height: 400 },
+	},
   image: {type: Types.CloudinaryImage},
-  dateFounded: { type: Types.Date, index: true, default: Types.Date.now }
+  dateFounded: { type: Types.Date, index: true, default: Types.Date.now, dependsOn: { state: 'published' } }
 });
 
 Club.register();

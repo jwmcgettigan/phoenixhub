@@ -1,15 +1,18 @@
-<div class="container">
+<div class="container" style="border: 5px solid black; border-radius: 20px; text-align:center;">
   <h1>Clubs</h1>
   <div class="row">
     <div class="col-md-12 col-lg-12">
       <div class="row">
         {{# each clubs}}
-          <div class="col-md-4 col-lg-4">
-            <h2 style="text-align:center"><a href="{{clubUrl slug}}">{{{title}}}</a></h2>
-            {{# if image}}
-              <img src="{{{cloudinaryUrl image width=400 height=200 crop="crop"}}}" class="thumbnail">
-            {{/if}}
-          </div>
+          <a href="{{clubUrl slug}}">
+            <figure style="width:33%">
+              <p>{{{title}}}</p>
+              {{# if image}}<img src="{{{cloudinaryUrl image}}}" style="margin: 0 auto 0 auto; max-width:100%; max-height:100%">{{/if}}
+              <div>
+                <p>{{{title}}}</p>
+              </div>
+            </figure>
+          </a>
         {{/each}}
       </div>
     </div>

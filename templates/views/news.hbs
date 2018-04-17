@@ -1,0 +1,28 @@
+<div class="container" style="border: 5px solid black; border-radius: 20px; text-align:center;">
+  <h1>News</h1>
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <div class="row">
+        <!--
+        {{# each news}}
+          <div class="col-md-4 col-lg-4">
+            <h2 style="text-align:center"><a href="{{articleUrl slug}}">{{{title}}}</a></h2>
+            {{# if image}}
+              <img src="{{{cloudinaryUrl image width=350 height=200 crop="crop"}}}" class="thumbnail">
+            {{/if}}
+          </div>
+        {{/each}}-->
+        {{# each news}}
+          <a href="{{articleUrl slug}}">
+            <figure class="col-sm-4">
+              <p>{{{title}}}</p>
+              {{# if image}}
+                <img src="{{{cloudinaryUrl image width=300 height=200 crop="crop"}}}" class="thumbnail" style="margin: auto">
+              {{/if}}
+            </figure>
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
