@@ -8,7 +8,7 @@ A website for students at Florida Polytechnic University.
     <td>Notes</td>
   </tr>
   <tr>
-    <td>[Install mongoDB]:https://www.mongodb.com/download-center?jmp=nav#community</td>
+    <td>[Install mongoDB](https://www.mongodb.com/download-center?jmp=nav#community)</td>
     <td></td>
     <td></td>
   </tr>
@@ -18,8 +18,8 @@ A website for students at Florida Polytechnic University.
     <td></td>
   </tr>
   <tr>
-    <td>[Download the lastest stable release of nvm-setup.zip and run it.]:https://github.com/coreybutler/nvm-windows/releases</td>
-    <td>[Follow the instructions here.]:https://github.com/creationix/nvm#installation</td>
+    <td>[Download the lastest stable release of nvm-setup.zip and run it.](https://github.com/coreybutler/nvm-windows/releases)</td>
+    <td>[Follow the instructions here.](https://github.com/creationix/nvm#installation)</td>
     <td></td>
   </tr>
   <tr>
