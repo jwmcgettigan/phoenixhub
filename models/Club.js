@@ -20,7 +20,8 @@ Club.add({
 		brief: { type: Types.Html, wysiwyg: true, height: 150 },
 		extended: { type: Types.Html, wysiwyg: true, height: 400 },
 	},
-  image: {type: Types.CloudinaryImage},
+  banner: {type: Types.CloudinaryImage},
+  logo: {type: Types.CloudinaryImage},
   dateFounded: { type: Types.Date, index: true, default: Types.Date.now, dependsOn: { state: 'published' } }
 });
 

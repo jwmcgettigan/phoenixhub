@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container center-style">
   <div class="row">
     <div class="col-md-12 col-lg-12">
       <article>
@@ -10,8 +10,8 @@
       </header>
       <div class="row">
         <div class="col-md-6 col-lg-6">
-          {{# if data.club.image}}
-            <img src="{{cloudinaryUrl data.club.image crop='fit'}}" class="img-responsive">
+          {{# if data.club.banner}}
+            <img src="{{cloudinaryUrl data.club.banner crop='fit'}}" class="img-responsive">
           {{/if}}
         </div>
         <div class="col-md-6 col-lg-6">
@@ -19,7 +19,7 @@
             <li class="list-group-item"><strong>Date Founded: </strong>{{data.club.dateFounded}}</li>
           </ul>
           <div class="well">
-            {{{data.club.description}}}
+            {{{club.description.extended}}}
           </div>
           <a class="btn btn-success btn-block" href="/contact">Ask About This Club</a>
         </div>

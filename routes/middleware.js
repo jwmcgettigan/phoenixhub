@@ -19,12 +19,12 @@ var _ = require('lodash');
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
-		{ label: 'Home', key: 'home', href: '/' },
+		{ label: 'PhoenixHub', key: 'home', href: '/' },
 		{ label: 'News', key: 'news', href: '/news'},
 		{ label: 'Events', key: 'events', href: '/events'},
 		{ label: 'Clubs', key: 'clubs', href: '/clubs'},
-		{ label: 'Blog', key: 'blog', href: '/blog' },
-		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
+		//{ label: 'Blog', key: 'blog', href: '/blog' },
+		//{ label: 'Gallery', key: 'gallery', href: '/gallery' },
 		{ label: 'Contact', key: 'contact', href: '/contact' },
 	];
 	res.locals.user = req.user;

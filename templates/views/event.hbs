@@ -1,21 +1,31 @@
-<div class="container">
-	<div class="row">
-		<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-			<article>
-				<p><a href="/news">&larr; Back to News</a></p>
-				<hr>
-				<header>
-					<h1>{{data.event.title}}</h1>
-					<h5>
-						<!--{{{categoryList data.article.categories prefix="articleed in "}}}-->
-						{{#if author.name.first}}by {{author.name.first}}{{/if}}
-					</h5>
-				</header>
-				<div class="post">
-					{{#if data.event.image}}<img src="{{{cloudinaryUrl data.article.image width=750 height=450 crop='fit' }}}" class="img-responsive">{{/if}}
-					{{{data.event.content.brief}}}
-				</div>
-			</article>
-		</div>
-	</div>
+<div class="container center-style">
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <article>
+        <p><a href="/events">&larr; Back to Events</a></p>
+      </article>
+      <hr>
+      <header>
+        <h1>{{data.event.title}}</h1>
+      </header>
+      <div class="row">
+        <div class="col-md-6 col-lg-6">
+          {{# if data.event.image}}
+            <img src="{{cloudinaryUrl data.event.image crop='fit'}}" class="img-responsive">
+          {{/if}}
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Date of Event: </strong>{{data.event.eventDate}}</li>
+						<li class="list-group-item"><strong>Author: </strong>{{#if author.name.first}}by {{author.name.first}}{{/if}}</li>
+					</ul>
+          <div class="well">
+						{{{event.description.brief}}}
+            {{{event.description.extended}}}
+          </div>
+          <a class="btn btn-success btn-block" href="/contact">Ask About This Event</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

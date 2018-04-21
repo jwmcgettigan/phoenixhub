@@ -1,17 +1,52 @@
-<div class="container" style="border: 5px solid black; height: 500px">
-  <h1>Events</h1>
-  <div class="row">
-    <div class="col-md-12 col-lg-12">
-      <div class="row">
-        {{# each events}}
-          <div class="col-md-4 col-lg-4">
-            <h2 style="text-align:center"><a href="{{eventUrl slug}}">{{{title}}}</a></h2>
-            {{# if image}}
-              <img src="{{{cloudinaryUrl image width=400 height=200 crop="crop"}}}" class="thumbnail">
-            {{/if}}
+<div class="container center-style">
+  <div class="row" style="margin: 0">
+    <div class="col-md-8 col-lg-8 mx-auto" style="padding-right:3%">
+      {{# each events}}
+      <article class="row card" style="padding:5%;background-color:white;border-radius:4px;margin-bottom:15px;border:1px solid #dadada;box-shadow: 0 3px 5px rgba(0,0,0,.2);">
+        <div class="">
+          <a href=""></a>
+          <div class="">
+            <header class="">
+              <h3 class="card-title" style="text-align:center;font-family:bold Open-Sans">
+                <a href="{{eventUrl slug}}">{{{title}}}</a></h3>
+              <div class="meta">
+                <span>Event Date {{eventDate}}</span>
+              </div>
+            </header>
+            <div style="background-color:gray;max-width:100%;max-height:100%;margin: 0 auto 0 auto">
+              {{# if image}}<img style="max-width:100%;max-height:100%;" class="card-img-top img-responsive" src="{{{cloudinaryUrl image}}}" class="thumbnail" style="margin: auto">{{/if}}
+            </div>
+            <div class="card-body" style="font-family:Lora;">
+              {{{ description.brief }}}
+            </div><!-- article content-->
           </div>
-        {{/each}}
-      </div>
+        </div>
+      </article><!-- article -->
+      {{/each}}
+    </div>
+
+    <div class="col-md-4 col-lg-4 mx-auto">
+      {{# each events}}
+      <article class="row card" style="padding:5%;background-color:white;border-radius:4px;margin-bottom:15px;border:1px solid #dadada;box-shadow: 0 3px 5px rgba(0,0,0,.2);">
+        <div class="">
+          <a href=""></a>
+          <div class="">
+            <header class="">
+              <h3 class="card-title" style="text-align:center;font-family:bold Open-Sans"><a href="{{articleUrl slug}}">{{{title}}}</a></h3>
+              <div class="meta">
+                <span>Event Date {{eventDate}}</span>
+              </div>
+            </header>
+            <div style="background-color:gray;max-width:100%;max-height:100%;">
+              {{# if image}}<img style="max-width:100%;max-height:100%;" class="card-img-top img-responsive" src="{{{cloudinaryUrl image }}}" class="thumbnail" style="margin: auto">{{/if}}
+            </div>
+            <div class="card-body" style="font-family:Lora;">
+              {{{ description.brief }}}
+            </div><!-- article content-->
+          </div>
+        </div>
+      </article><!-- article -->
+      {{/each}}
     </div>
   </div>
 </div>

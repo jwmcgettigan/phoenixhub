@@ -1,9 +1,31 @@
-<div class="container" style="border: 5px solid black; border-radius: 20px; text-align:center;">
-  <h1>News</h1>
-  <div class="row">
-    <div class="col-md-12 col-lg-12">
+<div class="container center-style">
+  <div class="row" style="margin: 0">
+    <div class="col-md-8 col-lg-8 mx-auto" style="padding-right:3%">
+      {{# each news}}
+      <article class="row card" style="padding:5%;background-color:white;border-radius:4px;margin-bottom:15px;border:1px solid #dadada;box-shadow: 0 3px 5px rgba(0,0,0,.2);">
+        <div class="">
+          <a href=""></a>
+          <div class="">
+            <header class="">
+              <h3 class="card-title" style="text-align:center;font-family:bold Open-Sans">
+                <a href="{{articleUrl slug}}">{{{title}}}</a></h3>
+              <div class="meta">
+                <span>Published {{publishedDate}}</span>
+              </div>
+            </header>
+            <div style="background-color:gray;margin: 0 auto 0 auto">
+              {{# if image}}<img style="width:100%" class="card-img-top img-responsive" src="{{{cloudinaryUrl image}}}" class="thumbnail" style="margin: auto">{{/if}}
+            </div>
+            <div class="card-body" style="font-family:Lora;">
+              {{{ content.brief }}}
+            </div><!-- article content-->
+          </div>
+        </div>
+      </article><!-- article -->
+      {{/each}}
+
+      <!--
       <div class="row">
-        <!--
         {{# each news}}
           <div class="col-md-4 col-lg-4">
             <h2 style="text-align:center"><a href="{{articleUrl slug}}">{{{title}}}</a></h2>
@@ -11,7 +33,7 @@
               <img src="{{{cloudinaryUrl image width=350 height=200 crop="crop"}}}" class="thumbnail">
             {{/if}}
           </div>
-        {{/each}}-->
+        {{/each}}
         {{# each news}}
           <a href="{{articleUrl slug}}">
             <figure class="col-sm-4">
@@ -22,7 +44,31 @@
             </figure>
           </a>
         {{/each}}
-      </div>
+      </div>-->
+    </div>
+
+    <div class="col-md-4 col-lg-4 mx-auto">
+      {{# each news}}
+      <article class="row card" style="padding:5%;background-color:white;border-radius:4px;margin-bottom:15px;border:1px solid #dadada;box-shadow: 0 3px 5px rgba(0,0,0,.2);">
+        <div class="">
+          <a href=""></a>
+          <div class="">
+            <header class="">
+              <h3 class="card-title" style="text-align:center;font-family:bold Open-Sans"><a href="{{articleUrl slug}}">{{{title}}}</a></h3>
+              <div class="meta">
+                <span>Published {{publishedDate}}</span>
+              </div>
+            </header>
+            <div style="background-color:gray;">
+              {{# if image}}<img style="max-width:100%;max-height:100%;" class="card-img-top img-responsive" src="{{{cloudinaryUrl image }}}" class="thumbnail" style="margin: auto">{{/if}}
+            </div>
+            <div class="card-body" style="font-family:Lora;">
+              {{{ content.brief }}}
+            </div><!-- article content-->
+          </div>
+        </div>
+      </article><!-- article -->
+      {{/each}}
     </div>
   </div>
 </div>

@@ -17,6 +17,7 @@ keystone.init({
 	'stylus': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
+	//'signin logo': '../images/logo.svg',
 	'views': 'templates/views',
 	'view engine': '.hbs',
 
@@ -56,11 +57,13 @@ keystone.set('routes', require('./routes'));
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	clubs: 'clubs',
-	posts: ['posts', 'post-categories'],
-	galleries: 'galleries',
+	//posts: ['posts', 'post-categories'],
+	//galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
 });
+
+keystone.set('signin logo', '../images/logo.png');
 
 // Start Keystone to connect to your database and initialise the web server
 
