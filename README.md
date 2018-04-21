@@ -8,12 +8,12 @@ A website for students at Florida Polytechnic University.
     <td>Notes</td>
   </tr>
   <tr>
-    <td>[Install mongoDB](https://www.mongodb.com/download-center?jmp=nav#community)</td>
+    <td> [**Install mongoDB Community**](https://www.mongodb.com/download-center) </td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>Install NVM</td>
+    <td>**Install NVM**</td>
     <td></td>
     <td></td>
   </tr>
@@ -23,7 +23,7 @@ A website for students at Florida Polytechnic University.
     <td></td>
   </tr>
   <tr>
-    <td>Verify NVM Installation</td>
+    <td>**Verify NVM Installation**</td>
     <td></td>
     <td></td>
   </tr>
@@ -33,7 +33,7 @@ A website for students at Florida Polytechnic University.
     <td></td>
   </tr>
   <tr>
-    <td>Install latest version of node.</td>
+    <td>**Install latest version of node.**</td>
     <td></td>
     <td></td>
   </tr>
@@ -44,7 +44,7 @@ nvm install <version></td>
     <td></td>
   </tr>
   <tr>
-    <td>Use node</td>
+    <td>**Use node**</td>
     <td></td>
     <td></td>
   </tr>
